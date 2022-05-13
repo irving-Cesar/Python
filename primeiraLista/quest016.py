@@ -10,8 +10,6 @@ lata_comprada = int(lata_comprada)
 if not (area % lata_litro) == 0:
     lata_comprada+=1
 
-calc_litro_usado = area / litro_por_metro
-
 valor_total = lata_comprada * lata_preco
 
 print('Valor a ser pago: {:.2f} R$, quantiadade de latas compradas {}.'.format(valor_total, int(lata_comprada)))
