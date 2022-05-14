@@ -20,12 +20,9 @@ elif salario_sem_reajuste >= 701 and salario_sem_reajuste <= 1500 or salario_sem
     string_percent = '10% '
     
     if salario_sem_reajuste >= 1500:
-        salario_reajustado = salario_sem_reajuste * 1.15
-        reajuste_salario += salario_sem_reajuste * 0.05
+        reajuste_salario += (int(salario_reajustado) * 0.05)
+        salario_reajustado *= 1.05
         string_percent += 'e 5% '
 
 
-print('Salário sem reajuste: {:.2f} R$
-      '\nPercentual aplicado: {}
-      '\nReajuste de: {:.2f} R$
-      '\nSalário com reajuste: {:.2f} R$'.format(salario_sem_reajuste, string_percent, reajuste_salario, salario_reajustado))
+print('Salário sem reajuste: {:.2f} R$\nPercentual aplicado: {}\nReajuste de: {:.2f} R$ \nSalário com reajuste: {:.2f} R$'.format(salario_sem_reajuste,string_percent, reajuste_salario, salario_reajustado))
