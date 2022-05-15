@@ -18,5 +18,9 @@ elif salario_bruto >= 1501 and salario_bruto <= 2500:
 elif salario_bruto > 2500:
     calc_ir = salario_bruto * 0.2
     desc_inss_ir = salario_bruto - (calc_ir + calc_inss)
+
+else:
+    calc_inss = 0
+    desc_inss_ir = salario_bruto
     
-print('Salário bruto: {:.2f} R$\nIR: {:.2f} R$\nINSS: {:.2f} R$\nFGTS: {:.2f} R$\nSalário líquido: {:.2f} R$'.format(salario_bruto, calc_ir, calc_inss, fgts, desc_inss_ir))
+print('Salário bruto: {:.2f} R$\n(-) IR: {:.2f} R$\n(-) INSS: {:.2f} R$\nFGTS: {:.2f} R$\nSalário líquido: {:.2f} R$'.format(salario_bruto, calc_ir, calc_inss, fgts, desc_inss_ir))
