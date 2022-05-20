@@ -19,7 +19,7 @@ if num.isnumeric() and int(num) < 1000:
     if origin_len == 1:
         if int(num[2]) == 1:
             arr_tipos[num.index(num[2])] = arr_tipos[num.index(num[2])].replace('s', '')
-        if put_zero:
+        if put_zero and num[2] == '0':
                 num = num.replace(num[num.index(num[2])], 'x', 2)
                 
         print(f'{num[2]} {arr_tipos[num.index(num[2])]}')
@@ -55,3 +55,4 @@ if num.isnumeric() and int(num) < 1000:
         
 else:
     print('Não é um número ou é maior que 1000.')
+
