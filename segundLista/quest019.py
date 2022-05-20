@@ -1,3 +1,5 @@
+#  326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+
 num = str(input('Insira um número inteiro menor que 1000: '))
 tamanho_max = 3;
 val_string = []
@@ -5,7 +7,7 @@ str_set = ''
 put_zero = False
 arr_tipos = ['centenas', 'dezenas', 'unidades']
 
-if int(num) < 1000 and num.isnumeric():
+if num.isnumeric() and int(num) < 1000:
     
     origin_len =len(num)    
     # inserir zero onde não há número. ex: 12 -> 012; 1 -> 001
@@ -52,4 +54,4 @@ if int(num) < 1000 and num.isnumeric():
         print(str_set)
         
 else:
-    print('Não é um número ou é maior que 1000 ou igual a 0.')
+    print('Não é um número ou é maior que 1000.')
