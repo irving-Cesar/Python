@@ -4,7 +4,6 @@ num = str(input('Insira um número inteiro menor que 1000: '))
 tamanho_max = 3;
 val_string = []
 str_set = ''
-put_zero = False
 arr_tipos = ['centenas', 'dezenas', 'unidades']
 
 if num.isnumeric() and int(num) < 1000:
@@ -12,7 +11,6 @@ if num.isnumeric() and int(num) < 1000:
     origin_len =len(num)    
     # inserir zero onde não há número. ex: 12 -> 012; 1 -> 001
     if len(num) < tamanho_max:
-        put_zero = True
         calc = tamanho_max - len(num)
         num = num.zfill(len(num) + calc)
         
