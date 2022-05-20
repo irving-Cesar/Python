@@ -19,20 +19,22 @@ if num.isnumeric() and int(num) < 1000:
     if origin_len == 1:
         if int(num[2]) == 1:
             arr_tipos[num.index(num[2])] = arr_tipos[num.index(num[2])].replace('s', '')
-        if put_zero and num[2] == '0':
+        if num[2] == '0':
                 num = num.replace(num[num.index(num[2])], 'x', 2)
                 
         print(f'{num[2]} {arr_tipos[num.index(num[2])]}')
         
     elif origin_len == 2:
+        if num[0] == '0':
+                num = num.replace(num[num.index(num[0])], 'x', 1)
         for i in range(2):
             if int(num[i+1]) == 1:
                 arr_tipos[num.index(num[i+1])] = arr_tipos[num.index(num[i+1])].replace('s', '')
             str_set = (f'{num[i+1]} {arr_tipos[num.index(num[i+1])]}')
+            if num[i+1] != 'x':
+                num = num.replace(num[num.index(num[i+1])], 'x', 1)
             val_string.append(str_set)
-            if put_zero:
-                num = num.replace(num[num.index(num[i+1])], 'x', 2)
-            num = num.replace(num[num.index(num[i+1])], 'x', 1)
+            
         print(' e '.join(val_string))
         
     elif origin_len == 3:
