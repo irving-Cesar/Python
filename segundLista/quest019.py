@@ -23,6 +23,7 @@ if num.isnumeric() and int(num) < 1000:
                 num = num.replace(num[num.index(num[2])], 'x', 2)
                 
         print(f'{num[2]} {arr_tipos[num.index(num[2])]}')
+        
     elif origin_len == 2:
         for i in range(2):
             if int(num[i+1]) == 1:
