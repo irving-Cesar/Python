@@ -1,5 +1,9 @@
+'''
+Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
+'''
+
 # dia-mes -> ser diferente de 0 e nao passar do valor maximo
-# ano -> ser diferente de 0 e ter 4 digitos
+# ano -> ser diferente de 0 e estar entre 1900 - 9999
 dia = False
 mes = False
 ano = False
@@ -18,7 +22,7 @@ if int(data_mes) != 0:
         mes = True
 
 if data_ano != 0:
-    if data_ano >= 1000 and data_ano <= 9999:
+    if data_ano >= 1900 and data_ano <= 9999:
         ano = True
 
 print('Data digitada:')
