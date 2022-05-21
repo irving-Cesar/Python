@@ -1,3 +1,6 @@
+'''
+Faça um Programa que leia três números e mostre-os em ordem decrescente.
+'''
 arr_dec = []
 for n in range(1, 4):
     num = int(input('Insira o {}° preço: '.format(n)))
