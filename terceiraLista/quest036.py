@@ -12,6 +12,8 @@ Vou montar a tabuada de 5 começando em 4 e terminando em 7:
 5 X 5 = 25
 5 X 6 = 30
 5 X 7 = 35
+
+Obs: Você deve verificar se o usuário não digitou o final menor que o inicial.
 '''
 
 num = int(input('Insira o numero: '))
