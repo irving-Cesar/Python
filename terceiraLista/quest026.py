@@ -27,7 +27,7 @@ arr_candi = [
 ]
 arr_num_vots = []
 for k in arr_candi:
-    arr_num_vots.append(k['num'])
+    arr_num_vots.append(k['num']) # guardar num dos candidatos
     
 form = ''
 print(f'{form: >6}CANDIDATOS:')
@@ -40,7 +40,7 @@ for i in range(eleitores):
     cont = 0
     while cont == 0:
         # voto = int(input(f'Eleitor {i+1}, em quem deseja votar (Número)?\nVoto - '))
-        voto = arr_num_vots[randint(0, 2)]
+        voto = arr_num_vots[randint(0, 2)] # escolher aleatoriamente os numeros dos candidatos
         for x in arr_candi:
             if voto == x['num']:
                 x['votos'] += 1
