@@ -10,8 +10,6 @@ for n, m in zip(range(1, cont_n+1), range(1, cont_n*2, 2)):
     result += f'{n}/{m}'
     if n < cont_n:
         result += ' + '
-    else:
-        result += '.'
     soma += n/m
 print(result,end='')
 print(f' = {soma:.2f}')
