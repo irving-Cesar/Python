@@ -5,11 +5,10 @@ Faça um programa que mostre os n termos da Série a seguir:
 '''
 cont_n = int(input('Quantidade: '))
 result = 'S = '
-soma = 0
 for n, m in zip(range(1, cont_n+1), range(1, cont_n*2, 2)):
     result += f'{n}/{m}'
     if n < cont_n:
         result += ' + '
-    soma += n/m
-print(result,end='')
-print(f' = {soma:.2f}')
+    else:
+        result += '.'
+print(result)
